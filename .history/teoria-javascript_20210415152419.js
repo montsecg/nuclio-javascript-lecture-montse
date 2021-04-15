@@ -43,17 +43,5 @@ const letters = ['a','b','c','d']  //* ARRAY DE LETRAS*//
 //* NUEVO ARRAY QUE GUARDA  LETRAS EN MAYÚSCULAS USANDO LA FUNCIÓN MAP CREADA CON UNA @FUNCTION*///
 const newLetters = map(letters, (x) => x.toUpperCase())
 ///* USANDO LA FUNCIÓN MAPS DE JAVA SE PODRIA TAMBIEN HACER LO SIGUIENTE*///
-letters.map(x => x.toUpperCase())  //Crea un nuevo ARRAY con los nuevo elementos
+letters.map(x => x.toUpperCase())
 
-
-///* EJEMPLO DE COMO ESCRIBIR Y USAR LA MISMA FUNCIÓN DE DOS FORMAS DISTINTAS COMO PARAMETRO DE OTRA FUNCIÓN*////
-/*se puede crear la función antes y aplicar como parámetro o se puede crear directamente com parámetro de otra función*/
-
-function charToUpperCase (char){
-    return char.toUpperCase()
-}
-
-const letters = ['a','b','c','d'] 
-const newLetters = map(letters, charToUpperCase)/*el parametro es la función creada*/
-
-const newLetters = map(letters, (char) => char.toUpperCase())/*el parametro es una @function que se declara en la misma función*/
