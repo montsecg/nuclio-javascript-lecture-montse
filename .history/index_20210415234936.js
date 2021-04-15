@@ -157,16 +157,9 @@ form.addEventListener("submit", (event)=> {
     event.preventDefault();//
     if (input.value) {
         addItem(input.value);//con el parámetro, se pueden añadir por defecto nuevos items <li> con el código
-        clearInput();//se limpia el INPUT;
+
     } 
     
 });
 
-addItem("Hola"); //añadir por defecto un item <li> sin pasar por el IMPUT
-
-//* Al hacer CLICK  en una tarea ha de borrarse*/
-function removeItem(){
-    list.removeChild();//eliminar un <li> del <ul>
-}
-
-list.children.addEventListener("click", removeItem());
+addItem("Hola"); //añadir por defecto un item <li>

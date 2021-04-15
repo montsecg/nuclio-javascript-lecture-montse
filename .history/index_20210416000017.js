@@ -165,8 +165,3 @@ form.addEventListener("submit", (event)=> {
 addItem("Hola"); //añadir por defecto un item <li> sin pasar por el IMPUT
 
 //* Al hacer CLICK  en una tarea ha de borrarse*/
-function removeItem(){
-    list.removeChild();//eliminar un <li> del <ul>
-}
-
-list.children.addEventListener("click", removeItem());

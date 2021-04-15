@@ -168,5 +168,3 @@ addItem("Hola"); //añadir por defecto un item <li> sin pasar por el IMPUT
 function removeItem(){
     list.removeChild();//eliminar un <li> del <ul>
 }
-
-list.children.addEventListener("click", removeItem());
