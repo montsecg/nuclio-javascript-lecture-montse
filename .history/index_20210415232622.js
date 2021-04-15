@@ -133,29 +133,14 @@ const list = document.querySelector("ul"); /* guarda la lista de tareas*/
 //*AÑADIR ETIQUETAS EN HTML CON JAVASCRIPT - EJEMPLO AÑADIR <LI> EN UNA LISTA USANDO UN FORMULARIO CON UN INPUT Y UN BOTÓN EN HTML*/
 const form = document.querySelector ("form");
 const input = document.querySelector ("input");
-const list = document.querySelector ("ul");
+const title = document.querySelector ("h1");
 
-function addItem (newValue){//sin parámetro
+function addItem (){
     const item = document.createElement("li"); //se crea el elemento <li> y se guarda en una constante item
-    item.innerText = newValue;// input.value // se guarda en item el valor del input 
+    item.innerText = input.value; // se guarda en item el valor del input 
     list.append(item); //se añade a la lista el item guardado
 
     input.value = ""; //se cambia el valor del input a nada, sirve para limpiar el input
     input.focus(); // se usa para que el cursor se focalice siempre en el input después de CLICKAR en el botón ADD
 
 };
-
-/*form.addEventListener("submit", addItem()); // esto es correcto, pero el <form> por defecto recarga la página y elimina el print del <list> realizado
-
-/*para que no recarge el <form> la página, hay que usar preventDefault en el evento*/
-
-form.addEventListener("submit", (event)=> {
-    event.preventDefault();//
-    if (input.value) {
-        addItem(input.value);//con el parámetro, se pueden añadir por defecto nuevos items <li> con el código
-
-    } 
-    
-});
-
-addItem("Hola"); //añadir por defecto un item <li>

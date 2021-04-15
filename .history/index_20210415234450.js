@@ -152,10 +152,7 @@ function addItem (newValue){//sin parámetro
 form.addEventListener("submit", (event)=> {
     event.preventDefault();//
     if (input.value) {
-        addItem(input.value);//con el parámetro, se pueden añadir por defecto nuevos items <li> con el código
-
+        addItem(input.value);//si no lleva parámetro, no se pueden introducir a mano nuevos <li>
     } 
     
 });
-
-addItem("Hola"); //añadir por defecto un item <li>

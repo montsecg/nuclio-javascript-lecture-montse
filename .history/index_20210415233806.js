@@ -135,9 +135,9 @@ const form = document.querySelector ("form");
 const input = document.querySelector ("input");
 const list = document.querySelector ("ul");
 
-function addItem (newValue){//sin parámetro
+function addItem (){
     const item = document.createElement("li"); //se crea el elemento <li> y se guarda en una constante item
-    item.innerText = newValue;// input.value // se guarda en item el valor del input 
+    item.innerText = input.value; // se guarda en item el valor del input 
     list.append(item); //se añade a la lista el item guardado
 
     input.value = ""; //se cambia el valor del input a nada, sirve para limpiar el input
@@ -151,11 +151,8 @@ function addItem (newValue){//sin parámetro
 
 form.addEventListener("submit", (event)=> {
     event.preventDefault();//
-    if (input.value) {
-        addItem(input.value);//con el parámetro, se pueden añadir por defecto nuevos items <li> con el código
-
-    } 
+    if (input.value !=="") {
+        addItem();
+    } bloquea lo que 
     
 });
-
-addItem("Hola"); //añadir por defecto un item <li>
