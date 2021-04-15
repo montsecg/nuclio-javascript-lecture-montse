@@ -133,8 +133,8 @@ const list = document.querySelector("ul"); /* guarda la lista de tareas*/
 //*AÑADIR ETIQUETAS EN HTML CON JAVASCRIPT - EJEMPLO AÑADIR <LI> EN UNA LISTA USANDO UN FORMULARIO CON UN INPUT Y UN BOTÓN EN HTML*/
 const form = document.querySelector ("form");
 const input = document.querySelector ("input");
-const list = document.querySelector (".li");
-console.log(list.textContent);
+const list = document.querySelector ("ul");
+console.log(list);
 
 function addItem (newValue){//sin parámetro
     

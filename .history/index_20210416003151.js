@@ -133,15 +133,12 @@ const list = document.querySelector("ul"); /* guarda la lista de tareas*/
 //*AÑADIR ETIQUETAS EN HTML CON JAVASCRIPT - EJEMPLO AÑADIR <LI> EN UNA LISTA USANDO UN FORMULARIO CON UN INPUT Y UN BOTÓN EN HTML*/
 const form = document.querySelector ("form");
 const input = document.querySelector ("input");
-const list = document.querySelector (".li");
-console.log(list.textContent);
+const list = document.querySelector ("ul");
 
 function addItem (newValue){//sin parámetro
-    
     const item = document.createElement("li"); //se crea el elemento <li> y se guarda en una constante item
     item.innerText = newValue;// input.value // se guarda en item el valor del input 
     list.append(item); //se añade a la lista el item guardado
-    //newArray.push(newElement);
 };
 
 /*se crea una funcion para limpiar el INPUT*/
@@ -168,9 +165,10 @@ form.addEventListener("submit", (event)=> {
 addItem("Hola"); //añadir por defecto un item <li> sin pasar por el IMPUT
 
 //* Al hacer CLICK  en una tarea ha de borrarse*/
-function removeItems(event){
+function removeItem(event){
     if(event == "click" && list.childNodes.addEventListener("click")){
-        list.childNodes.remove();}//eliminar un <li> del <ul>
+        
+        list.childNodes.removeItem;}//eliminar un <li> del <ul>
 };
 
-//console.log(list.childNodes)
+console.log(list.childNodes)

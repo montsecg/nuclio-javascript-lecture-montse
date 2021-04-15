@@ -134,7 +134,7 @@ const list = document.querySelector("ul"); /* guarda la lista de tareas*/
 const form = document.querySelector ("form");
 const input = document.querySelector ("input");
 const list = document.querySelector (".li");
-console.log(list.textContent);
+console.log(list.value);
 
 function addItem (newValue){//sin parámetro
     
