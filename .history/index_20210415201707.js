@@ -53,7 +53,7 @@ button.addEventListener("click", () =>{
 
 /*Cuando el input cambie, imprime por consola "Hola"*/
 const input = document.querySelector ("input");
-input.addEventListener("input", () =>{
+input.addEventListener("change", () =>{
     console.log("Hola");
 })
 
