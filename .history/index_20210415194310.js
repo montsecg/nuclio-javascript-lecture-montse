@@ -33,8 +33,6 @@ button.addEventListener("click", () =>{/* primer parámeto(click)= el nombre del
     button.innerText = count;/*segundo parámetro (contador) = /*la acción que se ha de ejecutar cuando ocurra el evento especificado en el primer parámetro*/
     count += 1;
     if (count >= 6 ) {
-        //title.style.textTransform = "uppercase";
- /*en todos los titulos se aplica la classe uppercase cuando se realizan 5 clicks en el botón*/
-        title.classList.add("uppercase"); 
+        title.style.textTransform = "uppercase";
     }
 });

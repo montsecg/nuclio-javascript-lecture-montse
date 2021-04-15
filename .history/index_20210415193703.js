@@ -26,15 +26,14 @@ button.addEventListener("click", () =>{ primer parámeto(click)= el nombre del e
 });*/
 
 //*cuando se haga click en el botón, se cambia el style (CSS) del h1*/
-const title = document.querySelector("h1");
+
+
 let count = 1;
 
 button.addEventListener("click", () =>{/* primer parámeto(click)= el nombre del evento que se quiere escuchar con la función addEventListener*/
     button.innerText = count;/*segundo parámetro (contador) = /*la acción que se ha de ejecutar cuando ocurra el evento especificado en el primer parámetro*/
     count += 1;
-    if (count >= 6 ) {
-        //title.style.textTransform = "uppercase";
- /*en todos los titulos se aplica la classe uppercase cuando se realizan 5 clicks en el botón*/
-        title.classList.add("uppercase"); 
+    if (count >= 11 ) {
+        count = 1;
     }
 });
