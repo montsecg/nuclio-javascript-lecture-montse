@@ -57,28 +57,9 @@ input.addEventListener("input", () =>{
     console.log("Hola");
 });*/
 
-/*Cuando el input se rellena, imprime en por consola lo que se ha escrito en el input */
+/*Cuando el input cambie, imprime por consola "Hola"*/
 const input = document.querySelector ("input");
-const button = document.querySelector ("button");
-const title = document.querySelector ("h1");
-
-//*en este caso se imprime por consola un evwento por cada caracter que se escribe en el input*/
-
-/*input.addEventListener("input", (event) =>{
-    console.log(event);
-});*/
-
-//*en este caso se imprime por consola un caracter por cada caracter que se escribe en el input*/
-
-/*input.addEventListener("input", () =>{
-    console.log(input.value);
-});*/
-
-//*en este caso se imprime por consola un caracter por cada caracter que se escribe en el input*/
-
 input.addEventListener("input", () =>{
-    console.log(input.value);
+    console.log("Hola");
 });
-
-
 
