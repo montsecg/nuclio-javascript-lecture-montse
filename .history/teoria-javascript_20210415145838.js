@@ -19,18 +19,9 @@ const sum = (a,b) => a+b;
 [1,2,3,4].map((z)=> z+1) /*Ejemplo de sumar 1 a todos los elementos del ARRAY con @FUNCTION, creada en la misma linea*/
 /* siguiendo el mismo ejemplo, el código puede ser el siguiente*/
 const numbers = [1,2,3,4] /*Se declara el ARRAY*/
-const newNumbers = numbers.map((n)=> n+2);/*se declara una nueva constante para guardar el resultado de mapear con la@function el ARRAY numbers*/
+const newNumbers = numbers.map((n)=> n+1);/*se declara una nueva constante para guardar el resultado de mapear con la@function el ARRAY numbers*/
 
 /*NO USAR: @function forma antigua.*/
 const sum = function(a,b) {
     return a+b;
-}
-
-//////*CREANDO LA FUNCION MAP *//////////
-
-function map(array, func) { /* función con 2 parametros de entrada, un ARRAY y una FUNCION*/
-        for (let i = 0; i < array.length; i++) {/*con el bucle se recorre el array y se guarda cada elemento en la una nueva variable llamada "element"*/
-        const element = array[i];
-        
-    }
 }

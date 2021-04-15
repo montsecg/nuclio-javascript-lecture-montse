@@ -25,12 +25,3 @@ const newNumbers = numbers.map((n)=> n+2);/*se declara una nueva constante para 
 const sum = function(a,b) {
     return a+b;
 }
-
-//////*CREANDO LA FUNCION MAP *//////////
-
-function map(array, func) { /* función con 2 parametros de entrada, un ARRAY y una FUNCION*/
-        for (let i = 0; i < array.length; i++) {/*con el bucle se recorre el array y se guarda cada elemento en la una nueva variable llamada "element"*/
-        const element = array[i];
-        
-    }
-}
