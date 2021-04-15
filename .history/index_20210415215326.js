@@ -81,51 +81,22 @@ input.addEventListener("input", () =>{
     title.innerText = input.value;
 });*/
 
-//*AÑADIR ETIQUETAS EN HTML CON JAVASCRIPT - EJEMPLO AÑADIR <LI> EN UNA LISTA USANDO UN INPUT Y UN BOTÓN EN HTML*/
+//*AÑADIR ETIQUETAS EN HTML CON JAVASCRIPT - EJEMPLO AÑADIR <LI> EN UNA LISTA */
 
-/*cuando se escriba en el input la tarea y se CLIKA el botón ADD, se agregue un <li>*/
+/*cuando se escriba en el input la tarea y se CLIKA el boton ADD, se agregue un <li>*/
 const input = document.querySelector("input");
 const button = document.querySelector("button");
 const list = document.querySelector("ul"); /* guarda la lista de tareas*/
 
-//cada vez que se escriba en el input, que se imprima la lista por consola
-/*input.addEventListener("input", () =>{
+input.addEventListener("input", () =>{
     //console.log(list);
-});*/ 
-
-//Cuando se presione el ENTER que se agrege el elemento a la lista 
-input.addEventListener("keypress", (event) =>{//el evento sucede cuando se presiona la tecla ENTER
-    if (event.key === 'Enter') {
-        addItem();
-       /* const item = document.createElement("li"); //se crea el elemento <li> y se guarda en una constante item
-        item.innerText = input.value; // se guarda en item el valor del input 
-        list.append(item); //se añade a la lista el item guardado
-
-        input.value = ""; //se cambia el valor del input a nada, sirve para limpiar el input
-        input.focus(); // se usa para que el cursor se focalice siempre en el input después de CLICKAR en el botón ADD;*/
-    }
-    
-});
+}); 
 
 //Crear un elemento nuevo para guardar el valor(texto) que se escribe en el INPUT y se clicka el boton ADD
 button.addEventListener("click", () =>{
-        addItem();
-   /* const item = document.createElement("li"); //se crea el elemento <li> y se guarda en una constante item
-    item.innerText = input.value; // se guarda en item el valor del input 
-    list.append(item); //se añade a la lista el item guardado
 
-    input.value = ""; //se cambia el valor del input a nada, sirve para limpiar el input
-    input.focus(); // se usa para que el cursor se focalice siempre en el input después de CLICKAR en el botón ADD*/
-
-});
-//*como en las dos funciones anteriores se repite el código, es mejor crear una función que englobe todo el código y se aplique donde sea necesario*//
-//Función para crear elemeto"li", guardarlo en una constante, añadirlo a la lista, borrar el input y mantener el cursos en el input
-function addItem (){
     const item = document.createElement("li"); //se crea el elemento <li> y se guarda en una constante item
     item.innerText = input.value; // se guarda en item el valor del input 
     list.append(item); //se añade a la lista el item guardado
 
-    input.value = ""; //se cambia el valor del input a nada, sirve para limpiar el input
-    input.focus(); // se usa para que el cursor se focalice siempre en el input después de CLICKAR en el botón ADD
-
-}
+});

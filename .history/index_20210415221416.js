@@ -96,7 +96,7 @@ const list = document.querySelector("ul"); /* guarda la lista de tareas*/
 //Cuando se presione el ENTER que se agrege el elemento a la lista 
 input.addEventListener("keypress", (event) =>{//el evento sucede cuando se presiona la tecla ENTER
     if (event.key === 'Enter') {
-        addItem();
+        addItem;
        /* const item = document.createElement("li"); //se crea el elemento <li> y se guarda en una constante item
         item.innerText = input.value; // se guarda en item el valor del input 
         list.append(item); //se añade a la lista el item guardado
@@ -109,7 +109,7 @@ input.addEventListener("keypress", (event) =>{//el evento sucede cuando se presi
 
 //Crear un elemento nuevo para guardar el valor(texto) que se escribe en el INPUT y se clicka el boton ADD
 button.addEventListener("click", () =>{
-        addItem();
+        addItem;
    /* const item = document.createElement("li"); //se crea el elemento <li> y se guarda en una constante item
     item.innerText = input.value; // se guarda en item el valor del input 
     list.append(item); //se añade a la lista el item guardado
