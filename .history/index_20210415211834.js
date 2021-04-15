@@ -51,19 +51,18 @@ button.addEventListener("click", () =>{
 
 //*TRABAJANDO CON INPUT EN HTML *//
 
-//*declaración de variables que para conectar las etiquetas de HTML y darle lógica con JAVASCRIPT 
-/*const input = document.querySelector ("input");
-const button = document.querySelector ("button");
-const title = document.querySelector ("h1");*/
-
 /*Cuando el input cambie, imprime por consola "Hola"*/
 /*const input = document.querySelector ("input");
 input.addEventListener("input", () =>{
     console.log("Hola");
 });*/
 
+/*Cuando el input se rellena, imprime en por consola lo que se ha escrito en el input */
+const input = document.querySelector ("input");
+const button = document.querySelector ("button");
+const title = document.querySelector ("h1");
 
-//*en este caso se imprime por consola un evento por cada caracter que se escribe en el input*/
+//*en este caso se imprime por consola un evwento por cada caracter que se escribe en el input*/
 
 /*input.addEventListener("input", (event) =>{
     console.log(event);
@@ -77,22 +76,9 @@ input.addEventListener("input", () =>{
 
 //*Para recoger como título lo que se escriba en el input*/
 
-/*input.addEventListener("input", () =>{
-    title.innerText = input.value;
-});*/
-
-//*AÑADIR ETIQUETAS EN HTML CON JAVASCRIPT - EJEMPLO AÑADIR <LI> EN UNA LISTA */
-
-/*cuando se escriba en el input la tarea y se CLIKA el boton ADD, se agregue un <li>*/
-const input = document.querySelector("input");
-const button = document.querySelector("button");
-const list = document.querySelector("ul"); /* guarda la lista de tareas*/
-
 input.addEventListener("input", () =>{
-    //console.log(list);
-//Crear un elemento nuevo para guardar el valor(texto) que se escribe en el INPUT 
-const item = document.createElement("li"); //se crea el elemento <li> y se guarda en una constante
-item.innerText = input.value; // se guarda el valor del input en el itemres
-list.append(item);
+    title.innerText = input.value;
+});
 
-})
+
+

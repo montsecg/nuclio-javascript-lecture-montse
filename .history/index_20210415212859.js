@@ -84,15 +84,3 @@ input.addEventListener("input", () =>{
 //*AÑADIR ETIQUETAS EN HTML CON JAVASCRIPT - EJEMPLO AÑADIR <LI> EN UNA LISTA */
 
 /*cuando se escriba en el input la tarea y se CLIKA el boton ADD, se agregue un <li>*/
-const input = document.querySelector("input");
-const button = document.querySelector("button");
-const list = document.querySelector("ul"); /* guarda la lista de tareas*/
-
-input.addEventListener("input", () =>{
-    //console.log(list);
-//Crear un elemento nuevo para guardar el valor(texto) que se escribe en el INPUT 
-const item = document.createElement("li"); //se crea el elemento <li> y se guarda en una constante
-item.innerText = input.value; // se guarda el valor del input en el itemres
-list.append(item);
-
-})

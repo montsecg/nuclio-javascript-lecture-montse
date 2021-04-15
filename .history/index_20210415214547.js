@@ -93,6 +93,6 @@ input.addEventListener("input", () =>{
 //Crear un elemento nuevo para guardar el valor(texto) que se escribe en el INPUT 
 const item = document.createElement("li"); //se crea el elemento <li> y se guarda en una constante
 item.innerText = input.value; // se guarda el valor del input en el itemres
-list.append(item);
+
 
 })
