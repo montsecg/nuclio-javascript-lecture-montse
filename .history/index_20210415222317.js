@@ -128,6 +128,6 @@ const list = document.querySelector("ul"); /* guarda la lista de tareas*/
     input.value = ""; //se cambia el valor del input a nada, sirve para limpiar el input
     input.focus(); // se usa para que el cursor se focalice siempre en el input después de CLICKAR en el botón ADD
 
-};*/
+},*/
 
 //*AÑADIR ETIQUETAS EN HTML CON JAVASCRIPT - EJEMPLO AÑADIR <LI> EN UNA LISTA USANDO UN FORMULARIO CON UN INPUT Y UN BOTÓN EN HTML*/
