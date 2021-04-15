@@ -1,6 +1,4 @@
-//* TRABAJANDO CON BOTONES EN HTML*//
-
-/*const button = document.querySelector("button");*/
+const button = document.querySelector("button");
 /*console.dir(button);
 button.innerText = "Hola!";*/
 
@@ -48,11 +46,3 @@ button.addEventListener("click", () =>{ primer parámeto(click)= el nombre del e
 button.addEventListener("click", () =>{
     title.classList.toggle("uppercase"); /*uppercases tiene que estar definido en la hoja de CCS, para transformar h1*/
 /*});*/
-
-//*TRABAJANDO CON INPUT EN HTML *//
-const input = document.querySelector ("input");
-/*const button = document.querySelector ("button");*/
-input.addEventListener("change", () =>{
-    console.log("Hola");
-})
-

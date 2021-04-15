@@ -51,8 +51,4 @@ button.addEventListener("click", () =>{
 
 //*TRABAJANDO CON INPUT EN HTML *//
 const input = document.querySelector ("input");
-/*const button = document.querySelector ("button");*/
-input.addEventListener("change", () =>{
-    console.log("Hola");
-})
-
+const button = document.querySelector ("button");
