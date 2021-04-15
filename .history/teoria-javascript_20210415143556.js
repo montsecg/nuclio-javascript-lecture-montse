@@ -9,3 +9,8 @@ const sum = (a,b) => {
 }
 /*@function simplificada en una línea*/
 const sum = (a,b) => a+b;
+
+/*@function forma antigua*/
+const sum = function(a,b) {
+    return a+b;
+}
