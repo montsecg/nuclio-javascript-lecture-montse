@@ -21,7 +21,7 @@ function createItem(newValue){
 tasks.forEach(createItem); // crear nuevo item y guardarlo en array tasks
 updatePendingTasks();//indica tareas guardadas en el array
 
-//**/
+
 form.addEventListener("submit",(event)=>{
     event.preventDefault();//elimina la recarga automática el formulario en el navegador 
     if (input.value) {

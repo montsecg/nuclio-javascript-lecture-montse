@@ -5,7 +5,7 @@ const error = document.querySelector(".error");//llama al <p class="error"> del 
 const pending = document.querySelector("span"); //llama al <span> del HTML 
 let tasks = getNewTask(); //array para guardar las nuevas tareas
 
-//* función para crear un Array donde guardar la <ul> de <li> */
+//* función para crear del Array para guardar la <ul> de <li> */
 function getNewTask() {//función para crear el array
     return [];
 }
@@ -17,11 +17,11 @@ function createItem(newValue){
     list.appendChild(item);// Se añade el item como hijo del <ul>
 }
 
-//* Crear nuevo <li>, guardar en <ul> e indicar tareas guardas = tareas pendientes que ha de realizar el usuario */
-tasks.forEach(createItem); // crear nuevo item y guardarlo en array tasks
-updatePendingTasks();//indica tareas guardadas en el array
 
-//**/
+tasks.forEach(createItem); // crear nuevo item y guardarlo en array tasks
+updatePendingTasks();//indica tareas pendientes en el array
+
+
 form.addEventListener("submit",(event)=>{
     event.preventDefault();//elimina la recarga automática el formulario en el navegador 
     if (input.value) {

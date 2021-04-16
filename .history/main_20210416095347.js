@@ -17,11 +17,11 @@ function createItem(newValue){
     list.appendChild(item);// Se añade el item como hijo del <ul>
 }
 
-//* Crear nuevo <li>, guardar en <ul> e indicar tareas guardas = tareas pendientes que ha de realizar el usuario */
+//* Crear nuevo <li>, guardar en <ul> e indicar <li> pendientes para realizar */
 tasks.forEach(createItem); // crear nuevo item y guardarlo en array tasks
-updatePendingTasks();//indica tareas guardadas en el array
+updatePendingTasks();//indica tareas pendientes en el array
 
-//**/
+
 form.addEventListener("submit",(event)=>{
     event.preventDefault();//elimina la recarga automática el formulario en el navegador 
     if (input.value) {
