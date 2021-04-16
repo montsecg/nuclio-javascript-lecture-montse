@@ -49,7 +49,6 @@ function removeItemArray(array , task){
         if (array[i]== item) {
             //delete array[i];//se le pone 1 porque se quiere eliminar únicamente el <li> que se ha clickado del array
             array.splice(i,1);
-            console.log(arary[i]);
         }
         
     }
