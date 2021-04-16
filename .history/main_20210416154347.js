@@ -36,18 +36,12 @@ list.addEventListener("click",(event)=>{
 //* función para crear un Array donde guardar la <ul> de <li> */
 
 function getNewTask() {//función para crear el array
-    return [];
-}
-
-function newStoredTask(){
-    const storedTask=localStorage.getItem("tasks");//constante guarda el string de todos los <li> guardados en localStorage
-    console.gog(storedTask);
-   
-    /*if (list.children) {// separa el string en elmentos y los guarda en un array
+   const storedTask=localStorage.getItem("tasks");//constante guarda el string de todos los <li> guardados en localStorage
+    if (list.childNodes) {// separa el string en elmentos y los guarda en un array
         return storedTask.split(",");
         
-    }*/
-
+    }
+    return [];
 }
 
 //* función para crear nuevo <li> del <ul> */

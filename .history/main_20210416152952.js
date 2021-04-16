@@ -9,6 +9,38 @@ let tasks = getNewTask(); //array para guardar las nuevas tareas
 tasks.forEach(createItem); // crear nuevo item y guardarlo en array tasks
 updatePendingTasks();//indica tareas guardadas en el array
 
+
+
+
+//* función para crear un Array donde guardar la <ul> de <li> */
+
+function getNewTask() {//función para crear el array
+   const storedTask=localStorage.getItem("tasks");//constante guarda el string de todos los <li> guardados en localStorage
+    if (storedTask) {// separa el string en elmentos y los guarda en un array
+        return storedTask.split(",");
+    }
+    return [];
+}
+
+//* función para crear nuevo <li> del <ul> */
+
+function createItem(newValue){
+    const item = document.createElement("li"); //crea un <li> para la lista
+    item.innerText= newValue;// El texto del item e igual al nuevo valor pasado por parámetro
+    list.appendChild(item);// Se apunta el item como hijo del <ul> en el navegador
+    tasks.push(item);
+    if (list.childElementCount !=updatePendingTasks) {
+        localStorage.setItem("tasks", list.innerText);
+    }
+    
+    updatePendingTasks();
+    
+}
+   
+/
+
+
+
 //*Al presionar ENTER o hacer CLICK, se realiza: crear y guardar <li> en array y consola, limpiar INPUT y ERROR, indicar tareas guardadas en ARRAY*/
 
 form.addEventListener("submit",(event)=>{
@@ -31,41 +63,6 @@ list.addEventListener("click",(event)=>{
     //updatePendingTasks();
 });
 
-
-
-//* función para crear un Array donde guardar la <ul> de <li> */
-
-function getNewTask() {//función para crear el array
-    return [];
-}
-
-function newStoredTask(){
-    const storedTask=localStorage.getItem("tasks");//constante guarda el string de todos los <li> guardados en localStorage
-    console.gog(storedTask);
-   
-    /*if (list.children) {// separa el string en elmentos y los guarda en un array
-        return storedTask.split(",");
-        
-    }*/
-
-}
-
-//* función para crear nuevo <li> del <ul> */
-
-function createItem(newValue){
-    const item = document.createElement("li"); //crea un <li> para la lista
-    item.innerText= newValue;// El texto del item e igual al nuevo valor pasado por parámetro
-    list.appendChild(item);// Se apunta el item como hijo del <ul> en el navegador
-    tasks.push(item);
-    if (list.childElementCount !=updatePendingTasks) {
-        localStorage.setItem("tasks", tasks);
-    }
-    
-    updatePendingTasks();
-    
-}
-
-   
 function removeItemArrayList(array , task){
     const item = task.target;//se genera constante item para recoger el target
     //console.log(item);
@@ -88,7 +85,6 @@ function removeItemArrayList(array , task){
     
 }
 
-
 function updatePendingTasks(){
     pending.innerText= tasks.length;//tareas pendientes igual a la dimensión del array tasks
 }
@@ -107,4 +103,3 @@ function setError(text){
     error.innerHTML = text;
     input.focus();
 }
-
