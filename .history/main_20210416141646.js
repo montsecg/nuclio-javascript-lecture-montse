@@ -61,10 +61,10 @@ function removeItemArrayList(array , task){
             //delete array[i];//otra forma de eliminar el item
             array.splice(i,1);//se le pone 1 porque se quiere eliminar únicamente el <li> que se ha clickado del array
         }
-      //  console.log(array[i]);
+        console.log(array[i]);
     }
     item.remove();//eliminar item de la pantalla
-    //console.log(array.length);
+    console.log(array.length);
     localStorage.setItem("tasks", tasks);
     updatePendingTasks();//actualiza las tareas pendientes al eliminar tareas.
     

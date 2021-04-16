@@ -23,7 +23,7 @@ function createItem(newValue){
     item.innerText= newValue;// El texto del item e igual al nuevo valor pasado por parámetro
     list.appendChild(item);// Se apunta el item como hijo del <ul> en el navegador
     tasks.push(item);
-    localStorage.setItem("tasks", newValue);
+    localStorage.setItem("tasks", item);
     updatePendingTasks();
 }
    
@@ -61,7 +61,7 @@ function removeItemArrayList(array , task){
             //delete array[i];//otra forma de eliminar el item
             array.splice(i,1);//se le pone 1 porque se quiere eliminar únicamente el <li> que se ha clickado del array
         }
-      //  console.log(array[i]);
+        console.log(array[i]);
     }
     item.remove();//eliminar item de la pantalla
     //console.log(array.length);
