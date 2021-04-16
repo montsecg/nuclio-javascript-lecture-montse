@@ -45,12 +45,12 @@ form.addEventListener("submit",(event)=>{
 function removeItemArray(array , task){
     array.splice(task.target,1);//se le pone 1 porque se quiere eliminar el <li> que se ha clickado del array
     //console.log(tasks.length);
-    updatePendingTasks();//actualiza las tareas pendientes al eliminar tareas.
-  return updatePendingTasks(); 
+   return array; 
 }
 
 list.addEventListener("click",(event)=>{
     removeItemArray(tasks, event);
+    updatePendingTasks();//actualiza las tareas pendientes al eliminar tareas.
 });
 
 

@@ -51,6 +51,7 @@ function removeItemArray(array , task){
 
 list.addEventListener("click",(event)=>{
     removeItemArray(tasks, event);
+    
 });
 
 
