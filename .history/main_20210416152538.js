@@ -27,7 +27,6 @@ function createItem(newValue){
         localStorage.setItem("tasks", list.innerText);
     }
     
-    updatePendingTasks();
     
 }
    
@@ -49,7 +48,7 @@ form.addEventListener("submit",(event)=>{
         setError("No hay tarea nueva para guardar. Escribe una tarea nueva")
 
     }
-   //updatePendingTasks();
+   updatePendingTasks();
 });
 
 //* Al presionar CLICK sobre un <li>, este se borra*/

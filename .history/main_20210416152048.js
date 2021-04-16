@@ -14,6 +14,7 @@ function getNewTask() {//función para crear el array
         return storedTask.split(",");
     }
     return [];
+    
 }
 
 //* función para crear nuevo <li> del <ul> */
@@ -24,9 +25,8 @@ function createItem(newValue){
     list.appendChild(item);// Se apunta el item como hijo del <ul> en el navegador
     tasks.push(item);
     if (list.childElementCount !=updatePendingTasks) {
-        localStorage.setItem("tasks", list.innerText);
+        localStorage.setItem("tasks", item);
     }
-    
     updatePendingTasks();
     
 }
@@ -49,17 +49,20 @@ form.addEventListener("submit",(event)=>{
         setError("No hay tarea nueva para guardar. Escribe una tarea nueva")
 
     }
-   //updatePendingTasks();
+   
 });
 
 //* Al presionar CLICK sobre un <li>, este se borra*/
 list.addEventListener("click",(event)=>{
-    removeItemArrayList(tasks, event);
-    //updatePendingTasks();
+    removeItemArrayList(tasks, event.AT_TARGET);
+    
 });
 
 function removeItemArrayList(array , task){
-    const item = task.target;//se genera constante item para recoger el target
+    localStorage.removeItem(array[task]);
+    delete array[task];
+
+   /* const item = task.;//se genera constante item para recoger el target
     //console.log(item);
     for (var i = 0; i < array.length; i++) {
         if (array[i]== item) {
@@ -75,9 +78,9 @@ function removeItemArrayList(array , task){
     if (list.childElementCount != localStorage.length) {
         localStorage.setItem("tasks", list.innerText);
     }
-    updatePendingTasks();//actualiza las tareas pendientes al eliminar tareas.
-    
-}
+    //updatePendingTasks();//actualiza las tareas pendientes al eliminar tareas.
+    updatePendingTasks();
+}*/
 
 function updatePendingTasks(){
     pending.innerText= tasks.length;//tareas pendientes igual a la dimensión del array tasks

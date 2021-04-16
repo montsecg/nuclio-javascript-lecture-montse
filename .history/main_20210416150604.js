@@ -14,6 +14,7 @@ function getNewTask() {//función para crear el array
         return storedTask.split(",");
     }
     return [];
+    updatePendingTasks();
 }
 
 //* función para crear nuevo <li> del <ul> */
@@ -26,7 +27,6 @@ function createItem(newValue){
     if (list.childElementCount !=updatePendingTasks) {
         localStorage.setItem("tasks", list.innerText);
     }
-    
     updatePendingTasks();
     
 }
@@ -49,13 +49,13 @@ form.addEventListener("submit",(event)=>{
         setError("No hay tarea nueva para guardar. Escribe una tarea nueva")
 
     }
-   //updatePendingTasks();
+   
 });
 
 //* Al presionar CLICK sobre un <li>, este se borra*/
 list.addEventListener("click",(event)=>{
     removeItemArrayList(tasks, event);
-    //updatePendingTasks();
+    
 });
 
 function removeItemArrayList(array , task){
@@ -75,8 +75,8 @@ function removeItemArrayList(array , task){
     if (list.childElementCount != localStorage.length) {
         localStorage.setItem("tasks", list.innerText);
     }
-    updatePendingTasks();//actualiza las tareas pendientes al eliminar tareas.
-    
+    //updatePendingTasks();//actualiza las tareas pendientes al eliminar tareas.
+    updatePendingTasks();
 }
 
 function updatePendingTasks(){
