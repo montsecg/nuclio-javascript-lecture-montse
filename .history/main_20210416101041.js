@@ -55,12 +55,6 @@ function updatePendingTasks(){
 function clearInput(){
     input.value="";
 }
-
 function clearError(){
     error.innerHTML = "";
-
-}
-
-function setError(text){
-    error.innerHTML = text;
 }

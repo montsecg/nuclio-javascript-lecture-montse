@@ -40,7 +40,7 @@ form.addEventListener("submit",(event)=>{
     }
     
 });
-
+console.log(tasks);
 
 list.addEventListener("click",(event)=>{
     removeItem(event.target);//elimina el item de la lista de tareas
@@ -55,12 +55,6 @@ function updatePendingTasks(){
 function clearInput(){
     input.value="";
 }
-
 function clearError(){
     error.innerHTML = "";
-
-}
-
-function setError(text){
-    error.innerHTML = text;
 }

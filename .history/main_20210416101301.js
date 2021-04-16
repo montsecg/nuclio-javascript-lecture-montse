@@ -58,7 +58,6 @@ function clearInput(){
 
 function clearError(){
     error.innerHTML = "";
-
 }
 
 function setError(text){

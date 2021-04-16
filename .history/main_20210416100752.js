@@ -23,7 +23,7 @@ function createItem(newValue){
 
 tasks.forEach(createItem); // crear nuevo item y guardarlo en array tasks
 updatePendingTasks();//indica tareas guardadas en el array
-
+console.log(tasks);
 //*Al presionar ENTER o hacer CLICK, se realiza: crear y guardar <li> en array y consola, limpiar INPUT y ERROR, indicar tareas guardadas en ARRAY*/
 
 form.addEventListener("submit",(event)=>{
@@ -41,7 +41,6 @@ form.addEventListener("submit",(event)=>{
     
 });
 
-
 list.addEventListener("click",(event)=>{
     removeItem(event.target);//elimina el item de la lista de tareas
     updatePendingTasks();//actualiza las tareas pendientes
@@ -55,12 +54,6 @@ function updatePendingTasks(){
 function clearInput(){
     input.value="";
 }
-
 function clearError(){
     error.innerHTML = "";
-
-}
-
-function setError(text){
-    error.innerHTML = text;
 }

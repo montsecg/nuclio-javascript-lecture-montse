@@ -1,7 +1,6 @@
 .error{
     color:red;
 }
-span{
+p.span{
     color:green;
-    font-size: 20px;
 }
