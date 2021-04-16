@@ -38,7 +38,7 @@ form.addEventListener("submit",(event)=>{
     event.preventDefault();//elimina la recarga automática el formulario en el navegador 
     if (input.value) {
         createItem(input.value);//crea un nuevo item con el valor del input y se guarda en la lista
-        //saveTask(input.value);//guardar la tarea en el console.log
+        saveTask(input.value);//guardar la tarea en el console.log
         clearInput();//limpia y focaliza el input al presionar click o enter
         clearError(); //limpia el error al iniciar la escritura en el input
         
@@ -66,7 +66,6 @@ function removeItemArrayList(array , task){
     }
     item.remove();//eliminar item de la pantalla
     console.log(array.length);
-    localStorage.setItem("tasks", tasks);
     updatePendingTasks();//actualiza las tareas pendientes al eliminar tareas.
     
 }

@@ -9,10 +9,10 @@ let tasks = getNewTask(); //array para guardar las nuevas tareas
 //* función para crear un Array donde guardar la <ul> de <li> */
 
 function getNewTask() {//función para crear el array
-   /* const storedTask=localStorage.getItem("tasks");//constante guarda el string de todos los <li> guardados en localStorage
+    const storedTask=localStorage.getItem("tasks");//constante guarda el string de todos los <li> guardados en localStorage
     if (storedTask) {// separa el string en elmentos y los guarda en un array
         return storedTask.split(",");
-    }*/
+    }
     return [];
 }
 
@@ -24,7 +24,6 @@ function createItem(newValue){
     list.appendChild(item);// Se apunta el item como hijo del <ul> en el navegador
     tasks.push(item);
     localStorage.setItem("tasks", tasks);
-    updatePendingTasks();
 }
    
 //* Crear nuevo <li>, guardar en ARRAY (<ul>) e indicar tareas guardas = tareas pendientes que ha de realizar el usuario */
@@ -38,7 +37,7 @@ form.addEventListener("submit",(event)=>{
     event.preventDefault();//elimina la recarga automática el formulario en el navegador 
     if (input.value) {
         createItem(input.value);//crea un nuevo item con el valor del input y se guarda en la lista
-        //saveTask(input.value);//guardar la tarea en el console.log
+        saveTask(input.value);//guardar la tarea en el console.log
         clearInput();//limpia y focaliza el input al presionar click o enter
         clearError(); //limpia el error al iniciar la escritura en el input
         
@@ -66,7 +65,6 @@ function removeItemArrayList(array , task){
     }
     item.remove();//eliminar item de la pantalla
     console.log(array.length);
-    localStorage.setItem("tasks", tasks);
     updatePendingTasks();//actualiza las tareas pendientes al eliminar tareas.
     
 }

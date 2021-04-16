@@ -66,7 +66,6 @@ function removeItemArrayList(array , task){
     }
     item.remove();//eliminar item de la pantalla
     console.log(array.length);
-    localStorage.setItem("tasks", tasks);
     updatePendingTasks();//actualiza las tareas pendientes al eliminar tareas.
     
 }
