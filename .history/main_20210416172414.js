@@ -43,8 +43,7 @@ function getNewTask() {//función para crear el array
 
 function newStoredTask(){
     const storedTask=localStorage.getItem("tasks");//constante guarda el string de todos los <li> guardados en localStorage
-    const splitStoredTask= storedTask.split(",");
-    localStorage.setItem("tasks", splitStoredTask);   
+    const splitStoredTask= storedTask.split(",")    
     console.log(storedTask);
     console.log(splitStoredTask);
    

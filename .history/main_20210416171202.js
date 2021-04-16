@@ -44,7 +44,6 @@ function getNewTask() {//función para crear el array
 function newStoredTask(){
     const storedTask=localStorage.getItem("tasks");//constante guarda el string de todos los <li> guardados en localStorage
     const splitStoredTask= storedTask.split(",");
-    localStorage.setItem("tasks", splitStoredTask);   
     console.log(storedTask);
     console.log(splitStoredTask);
    
@@ -63,7 +62,7 @@ function createItem(newValue){
     list.appendChild(item);// Se apunta el item como hijo del <ul> en el navegador
     tasks.push(item);
     if (list.childElementCount !=updatePendingTasks) {
-        localStorage.setItem("tasks", newValue);
+        localStorage.setItem("tasks", tasks);
     }
     
     updatePendingTasks();
