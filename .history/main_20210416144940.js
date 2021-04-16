@@ -23,11 +23,8 @@ function createItem(newValue){
     item.innerText= newValue;// El texto del item e igual al nuevo valor pasado por parámetro
     list.appendChild(item);// Se apunta el item como hijo del <ul> en el navegador
     tasks.push(item);
-    if (list.childElementCount !=updatePendingTasks) {
-        localStorage.setItem("tasks", list);
-    }
-    
-    
+    localStorage.setItem("tasks", newValue);
+    //updatePendingTasks();
 }
    
 //* Crear nuevo <li>, guardar en ARRAY (<ul>) e indicar tareas guardas = tareas pendientes que ha de realizar el usuario */
@@ -48,16 +45,20 @@ form.addEventListener("submit",(event)=>{
         setError("No hay tarea nueva para guardar. Escribe una tarea nueva")
 
     }
-   updatePendingTasks();
+    updatePendingTasks();
 });
 
 //* Al presionar CLICK sobre un <li>, este se borra*/
 list.addEventListener("click",(event)=>{
     removeItemArrayList(tasks, event);
-    
+    updatePendingTasks();
 });
 
 function removeItemArrayList(array , task){
+    /*list.removeChild(task.target);//elimina el <li> que se ha clickado
+    const itemsLi = document.querySelectorAll("li"); // Guarda todos los <li> que quedan en HTML 
+    itemsLi.forEach((task) => tasks.push(task.innerText));*/
+    
     const item = task.target;//se genera constante item para recoger el target
     //console.log(item);
     for (var i = 0; i < array.length; i++) {
@@ -71,7 +72,7 @@ function removeItemArrayList(array , task){
     //console.log(array.length);
     localStorage.setItem("tasks", tasks);
     //updatePendingTasks();//actualiza las tareas pendientes al eliminar tareas.
-    updatePendingTasks();
+    
 }
 
 function updatePendingTasks(){

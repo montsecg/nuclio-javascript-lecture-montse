@@ -23,11 +23,11 @@ function createItem(newValue){
     item.innerText= newValue;// El texto del item e igual al nuevo valor pasado por parámetro
     list.appendChild(item);// Se apunta el item como hijo del <ul> en el navegador
     tasks.push(item);
-    if (list.childElementCount !=updatePendingTasks) {
-        localStorage.setItem("tasks", list);
+    if (tasks.push(item)) {
+        localStorage.setItem("tasks", tasks);
     }
     
-    
+    updatePendingTasks();
 }
    
 //* Crear nuevo <li>, guardar en ARRAY (<ul>) e indicar tareas guardas = tareas pendientes que ha de realizar el usuario */
@@ -48,7 +48,7 @@ form.addEventListener("submit",(event)=>{
         setError("No hay tarea nueva para guardar. Escribe una tarea nueva")
 
     }
-   updatePendingTasks();
+   
 });
 
 //* Al presionar CLICK sobre un <li>, este se borra*/

@@ -23,8 +23,8 @@ function createItem(newValue){
     item.innerText= newValue;// El texto del item e igual al nuevo valor pasado por parámetro
     list.appendChild(item);// Se apunta el item como hijo del <ul> en el navegador
     tasks.push(item);
-    if (list.childElementCount !=updatePendingTasks) {
-        localStorage.setItem("tasks", list);
+    if (tasks.push(item)) {
+        localStorage.setItem("tasks", tasks);
     }
     
     
