@@ -13,7 +13,8 @@ form.addEventListener("submit",(event)=>{
     if (input.value) {
         createItem(input.value);//crea un nuevo item con el valor del input
         saveTask(input.value);//guardar la tarea en el console.log
-        clearInput();//limpia y focaliza el input al presionar click o enter
+        clearInput();//limpia el input al presionar click o enter
+        focus();//focaliza el cursor en el input, para que esté siempre preparado para escribir en el input
         clearError(); //limpia el error al iniciar la escritura en el input
         updatePendingTasks(); //indica las tareas pendientes
     } else {
