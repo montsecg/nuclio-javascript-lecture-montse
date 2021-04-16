@@ -42,10 +42,11 @@ form.addEventListener("submit",(event)=>{
     
 });
 
-function removeItemArray(array , task){
-    
-    updatePendingTasks;
-    
+function removeItem(event){
+    list.addEventListener("click", (event)=>{
+        list.removeChild;
+        updatePendingTasks;
+    })
 }
 
 list.addEventListener("click",(event)=>{

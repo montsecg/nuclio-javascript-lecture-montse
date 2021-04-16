@@ -16,8 +16,7 @@ function getNewTask() {//función para crear el array
 function createItem(newValue){
     const item = document.createElement("li"); //crea un <li> para la lista
     item.innerText= newValue;// El texto del item e igual al nuevo valor pasado por parámetro
-    list.appendChild(item);// Se apunta el item como hijo del <ul> en el navegador
-    tasks.push(item);//guarda el item en el array de la lista
+    list.appendChild(item);// Se añade el item como hijo del <ul>
 }
 
 //* Crear nuevo <li>, guardar en ARRAY (<ul>) e indicar tareas guardas = tareas pendientes que ha de realizar el usuario */
@@ -42,10 +41,11 @@ form.addEventListener("submit",(event)=>{
     
 });
 
-function removeItemArray(array , task){
-    
-    updatePendingTasks;
-    
+function removeItem(event){
+    list.addEventListener("click", (event)=>{
+        list.removeChild;
+        updatePendingTasks;
+    })
 }
 
 list.addEventListener("click",(event)=>{
