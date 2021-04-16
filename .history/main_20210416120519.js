@@ -5,7 +5,6 @@ const error = document.querySelector(".error");//llama al <p class="error"> del 
 const pending = document.querySelector("span"); //llama al <span> del HTML 
 let tasks = getNewTask(); //array para guardar las nuevas tareas
 
-
 //* función para crear un Array donde guardar la <ul> de <li> */
 
 function getNewTask() {//función para crear el array
@@ -19,7 +18,6 @@ function createItem(newValue){
     item.innerText= newValue;// El texto del item e igual al nuevo valor pasado por parámetro
     list.appendChild(item);// Se apunta el item como hijo del <ul> en el navegador
     tasks.push(item);//guarda el item en el array de la lista
-    localStorage.setItem("tasks");
 }
 
 //* Crear nuevo <li>, guardar en ARRAY (<ul>) e indicar tareas guardas = tareas pendientes que ha de realizar el usuario */
@@ -33,7 +31,7 @@ form.addEventListener("submit",(event)=>{
     event.preventDefault();//elimina la recarga automática el formulario en el navegador 
     if (input.value) {
         createItem(input.value);//crea un nuevo item con el valor del input y se guarda en la lista
-        saveTask(input.value);//guardar la tarea en el console.log
+    //    saveTask(input.value);//guardar la tarea en el console.log
         clearInput();//limpia y focaliza el input al presionar click o enter
         clearError(); //limpia el error al iniciar la escritura en el input
         updatePendingTasks(); //indica las tareas array
@@ -45,16 +43,17 @@ form.addEventListener("submit",(event)=>{
 });
 
 function removeItemArray(array , task){
-    const item = task.target;//se genera constante item para recoger el target
-    //console.log(item);
+    const item = task.target;
+    console.log(item);
+    
     for (var i = 0; i < array.length; i++) {
         if (array[i]== item) {
-            //delete array[i];//otra forma de eliminar el item
+            //delete array[i];
             array.splice(i,1);//se le pone 1 porque se quiere eliminar únicamente el <li> que se ha clickado del array
         }
         //console.log(array[i]);
     }
-    item.remove();//eliminar item de la pantalla
+    item.remove();
     //console.log(array.length);
     updatePendingTasks();//actualiza las tareas pendientes al eliminar tareas.
   return updatePendingTasks(); 
