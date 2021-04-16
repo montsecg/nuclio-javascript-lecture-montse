@@ -19,7 +19,7 @@ function createItem(newValue){
     item.innerText= newValue;// El texto del item e igual al nuevo valor pasado por parámetro
     list.appendChild(item);// Se apunta el item como hijo del <ul> en el navegador
     tasks.push(item);//guarda el item en el array de la lista
-    localStorage.setItem(tasks, item);
+   // localStorage.setItem(tasks, item);
 }
    
 //* Crear nuevo <li>, guardar en ARRAY (<ul>) e indicar tareas guardas = tareas pendientes que ha de realizar el usuario */

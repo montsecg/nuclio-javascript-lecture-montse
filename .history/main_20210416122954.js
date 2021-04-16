@@ -19,7 +19,7 @@ function createItem(newValue){
     item.innerText= newValue;// El texto del item e igual al nuevo valor pasado por parámetro
     list.appendChild(item);// Se apunta el item como hijo del <ul> en el navegador
     tasks.push(item);//guarda el item en el array de la lista
-    localStorage.setItem(tasks, item);
+    localStorage.setItem("tasks");
 }
    
 //* Crear nuevo <li>, guardar en ARRAY (<ul>) e indicar tareas guardas = tareas pendientes que ha de realizar el usuario */
@@ -33,7 +33,7 @@ form.addEventListener("submit",(event)=>{
     event.preventDefault();//elimina la recarga automática el formulario en el navegador 
     if (input.value) {
         createItem(input.value);//crea un nuevo item con el valor del input y se guarda en la lista
-      //  saveTask(input.value);//guardar la tarea en el console.log
+        saveTask(input.value);//guardar la tarea en el console.log
         clearInput();//limpia y focaliza el input al presionar click o enter
         clearError(); //limpia el error al iniciar la escritura en el input
         updatePendingTasks(); //indica las tareas array
@@ -44,12 +44,7 @@ form.addEventListener("submit",(event)=>{
     
 });
 
-//* Al presionar CLICK sobre un <li>, este se borra*/
-list.addEventListener("click",(event)=>{
-    removeItemArrayList(tasks, event);
-});
-
-function removeItemArrayList(array , task){
+function removeItemArray(array , task){
     const item = task.target;//se genera constante item para recoger el target
     //console.log(item);
     for (var i = 0; i < array.length; i++) {
@@ -62,14 +57,13 @@ function removeItemArrayList(array , task){
     item.remove();//eliminar item de la pantalla
     //console.log(array.length);
     updatePendingTasks();//actualiza las tareas pendientes al eliminar tareas.
-    
-}
-/*function saveTask(){
-localStorage.setItem(tasks,item){
-
+  return updatePendingTasks(); 
 }
 
-}*/
+list.addEventListener("click",(event)=>{
+    removeItemArray(tasks, event);
+});
+
 
 function updatePendingTasks(){
     pending.innerText= tasks.length;//tareas pendientes igual a la dimensión del array tasks

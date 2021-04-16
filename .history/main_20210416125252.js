@@ -67,9 +67,9 @@ function removeItemArrayList(array , task){
 /*function saveTask(){
 localStorage.setItem(tasks,item){
 
-}
-
 }*/
+
+}
 
 function updatePendingTasks(){
     pending.innerText= tasks.length;//tareas pendientes igual a la dimensión del array tasks
