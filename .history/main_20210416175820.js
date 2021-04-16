@@ -42,9 +42,9 @@ function getNewTask() {//función para crear el array
 }
 
 function newStoredTask(){
-    const storedTask = localStorage.getItem("tasks", tasks);
+    const storedTask = localStorage.getItem("tasks");
     if(storedTask){
-        return storedTask.split(",");
+        return localStorage.split(",");
     }
    
 }

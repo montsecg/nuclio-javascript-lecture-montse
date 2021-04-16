@@ -19,7 +19,7 @@ form.addEventListener("submit",(event)=>{
         createItem(input.value);//crea un nuevo item con el valor del input y se guarda en ARRAY de la lista y del console.log
         clearInput();//limpia y focaliza el input al presionar click o enter
         clearError(); //limpia el error al iniciar la escritura en el input
-        newStoredTask();
+        //newStoredTask(input.value);
     } else {
         setError("No hay tarea nueva para guardar. Escribe una tarea nueva")
 
@@ -41,10 +41,10 @@ function getNewTask() {//función para crear el array
     return [];
 }
 
-function newStoredTask(){
-    const storedTask = localStorage.getItem("tasks", tasks);
+function newStoredTask(newValue){
+    const storedTask = localStorage.getItem("tasks");
     if(storedTask){
-        return storedTask.split(",");
+        return localStorage.split(",");
     }
    
 }

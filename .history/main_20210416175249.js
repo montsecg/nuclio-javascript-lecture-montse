@@ -4,7 +4,7 @@ const list = document.querySelector("ul"); //llama al <ul> del HTML
 const error = document.querySelector(".error");//llama al <p class="error"> del HTML
 const pending = document.querySelector("span"); //llama al <span> del HTML 
 let tasks = getNewTask(); //array para guardar las nuevas tareas
-
+const storedTask = [];
 
 
 //* Crear nuevo <li>, guardar en ARRAY (<ul>) e indicar tareas guardas = tareas pendientes que ha de realizar el usuario */
@@ -19,7 +19,7 @@ form.addEventListener("submit",(event)=>{
         createItem(input.value);//crea un nuevo item con el valor del input y se guarda en ARRAY de la lista y del console.log
         clearInput();//limpia y focaliza el input al presionar click o enter
         clearError(); //limpia el error al iniciar la escritura en el input
-        newStoredTask();
+        //newStoredTask(input.value);
     } else {
         setError("No hay tarea nueva para guardar. Escribe una tarea nueva")
 
@@ -41,13 +41,11 @@ function getNewTask() {//función para crear el array
     return [];
 }
 
-function newStoredTask(){
-    const storedTask = localStorage.getItem("tasks", tasks);
-    if(storedTask){
-        return storedTask.split(",");
-    }
-   
-}
+/*function newStoredTask(newValue){
+    localStorage.setItem("tasks", newValue);
+    //storedTask.forEach(newValue)
+  //  return localStorage.getItem.split(",");
+}*/
 
 //* función para crear nuevo <li> del <ul> */
 

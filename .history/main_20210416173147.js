@@ -42,11 +42,17 @@ function getNewTask() {//función para crear el array
 }
 
 function newStoredTask(){
-    const storedTask = localStorage.getItem("tasks", tasks);
-    if(storedTask){
-        return storedTask.split(",");
-    }
+    const storedTask=localStorage.getItem("tasks");//constante guarda el string de todos los <li> guardados en localStorage
+    //const splitStoredTask= storedTask.split(",");
+    //localStorage.setItem("tasks", splitStoredTask);   
+    console.log(storedTask);
+    console.log(splitStoredTask);
    
+    /*if (list.children) {// separa el string en elmentos y los guarda en un array
+        return storedTask.split(",");
+        
+    }*/
+
 }
 
 //* función para crear nuevo <li> del <ul> */
@@ -56,9 +62,9 @@ function createItem(newValue){
     item.innerText= newValue;// El texto del item e igual al nuevo valor pasado por parámetro
     list.appendChild(item);// Se apunta el item como hijo del <ul> en el navegador
     tasks.push(item);
-    if (list.childElementCount !=updatePendingTasks) {
+    /*if (list.childElementCount !=updatePendingTasks) {
         localStorage.setItem("tasks", newValue);
-    }
+    }*/
     
     updatePendingTasks();
     

@@ -4,7 +4,7 @@ const list = document.querySelector("ul"); //llama al <ul> del HTML
 const error = document.querySelector(".error");//llama al <p class="error"> del HTML
 const pending = document.querySelector("span"); //llama al <span> del HTML 
 let tasks = getNewTask(); //array para guardar las nuevas tareas
-
+const storedTask= newStoredTask();
 
 
 //* Crear nuevo <li>, guardar en ARRAY (<ul>) e indicar tareas guardas = tareas pendientes que ha de realizar el usuario */
@@ -42,11 +42,17 @@ function getNewTask() {//función para crear el array
 }
 
 function newStoredTask(){
-    const storedTask = localStorage.getItem("tasks", tasks);
-    if(storedTask){
-        return storedTask.split(",");
-    }
+    //constante guarda el string de todos los <li> guardados en localStorage
+    //const splitStoredTask= storedTask.split(",");
+    //localStorage.setItem("tasks", splitStoredTask);   
+    console.log(storedTask);
+    //console.log(splitStoredTask);
    
+    /*if (list.children) {// separa el string en elmentos y los guarda en un array
+        return storedTask.split(",");
+        
+    }*/
+
 }
 
 //* función para crear nuevo <li> del <ul> */
@@ -56,9 +62,9 @@ function createItem(newValue){
     item.innerText= newValue;// El texto del item e igual al nuevo valor pasado por parámetro
     list.appendChild(item);// Se apunta el item como hijo del <ul> en el navegador
     tasks.push(item);
-    if (list.childElementCount !=updatePendingTasks) {
+    /*if (list.childElementCount !=updatePendingTasks) {
         localStorage.setItem("tasks", newValue);
-    }
+    }*/
     
     updatePendingTasks();
     
