@@ -134,7 +134,11 @@ const list = document.querySelector("ul"); /* guarda la lista de tareas*/
 const form = document.querySelector ("form");
 const input = document.querySelector ("input");
 const list = document.querySelector ("ul");
-
+const childList = document.querySelectorAll ("li");
+const ArraychilList = childList.value;
+for (let i = 0; i < ArraychilList.length; i++) {
+    console.log(ArraychilList[i]);
+}
 
 
 function addItem (newValue){//sin parámetro
@@ -168,4 +172,10 @@ form.addEventListener("submit", (event)=> {
 
 addItem("Hola"); //añadir por defecto un item <li> sin pasar por el IMPUT
 
+//* Al hacer CLICK  en una tarea ha de borrarse*/
+function removeItems(event){
+    if(event == "click" && list.childNodes.addEventListener("click")){
+        list.childNodes.remove();}//eliminar un <li> del <ul>
+};
 
+//console.log(list.childNodes)
